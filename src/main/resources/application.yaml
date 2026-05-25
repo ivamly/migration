@@ -1,3 +1,11 @@
 spring:
   application:
     name: migration
+  datasource:
+    url: jdbc:sqlite:my_database.db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.community.dialect.SQLiteDialect
+  liquibase:
+    enabled: false
