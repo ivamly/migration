@@ -5,11 +5,11 @@ spring:
     url: jdbc:sqlite:my_database.db
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.community.dialect.SQLiteDialect
         format_sql: true
     show-sql: true
   liquibase:
-    enabled: false
+    change-log: classpath:/db/changelog/changelog-for-sqlte.yaml

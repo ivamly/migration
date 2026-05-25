@@ -1,7 +1,7 @@
 databaseChangeLog:
 - changeSet:
-    id: 1779723114416-1
-    author: ivanmalutin (generated)
+    id: 1779721964653-1
+    author: ivanmalutin
     changes:
     - createTable:
         columns:
@@ -9,7 +9,6 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_AUTHOR
             name: id
             type: BLOB(2000000000)
         - column:
@@ -20,8 +19,8 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: author
 - changeSet:
-    id: 1779723114416-2
-    author: ivanmalutin (generated)
+    id: 1779721964653-2
+    author: ivanmalutin
     changes:
     - createTable:
         columns:
@@ -32,7 +31,6 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_BOOK
             name: id
             type: BLOB(2000000000)
         - column:
@@ -40,8 +38,8 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: book
 - changeSet:
-    id: 1779723114416-3
-    author: ivanmalutin (generated)
+    id: 1779721964653-3
+    author: ivanmalutin
     changes:
     - createTable:
         columns:
@@ -49,7 +47,6 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_BOOKSTORE
             name: id
             type: BLOB(2000000000)
         - column:
@@ -57,8 +54,8 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: bookstore
 - changeSet:
-    id: 1779723114416-4
-    author: ivanmalutin (generated)
+    id: 1779721964653-4
+    author: ivanmalutin
     changes:
     - createTable:
         columns:
@@ -66,20 +63,18 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_BOOKSTORE_BOOK
             name: book_id
             type: BLOB(2000000000)
         - column:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_BOOKSTORE_BOOK
             name: bookstore_id
             type: BLOB(2000000000)
         tableName: bookstore_book
 - changeSet:
-    id: 1779723114416-5
-    author: ivanmalutin (generated)
+    id: 1779721964653-5
+    author: ivanmalutin
     changes:
     - createTable:
         columns:
@@ -90,8 +85,6 @@ databaseChangeLog:
             constraints:
               nullable: false
               primaryKey: true
-              primaryKeyName: PK_LICENSE
             name: id
             type: BLOB(2000000000)
         tableName: license
-
