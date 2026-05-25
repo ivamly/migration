@@ -1,18 +1,6 @@
 spring:
   application:
     name: migration
-  datasource:
-    #    url: jdbc:sqlite:my_database.db
-    url: jdbc:postgresql://localhost:5432/mydb
-    username: myuser
-    password: mypassword
-    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: validate
-    properties:
-      hibernate:
-  #        dialect: org.hibernate.community.dialect.SQLiteDialect
-  liquibase:
-    #    change-log: classpath:/db/changelog/changelog-for-sqlte.yaml
-    change-log: classpath:/db/changelog/changelog-for-pg.yaml

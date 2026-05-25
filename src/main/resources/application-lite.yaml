@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:my_database.db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.community.dialect.SQLiteDialect
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-for-sqlte.yaml
