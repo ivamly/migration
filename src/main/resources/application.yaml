@@ -4,8 +4,12 @@ spring:
   datasource:
     url: jdbc:sqlite:my_database.db
   jpa:
+    hibernate:
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.community.dialect.SQLiteDialect
+        format_sql: true
+    show-sql: true
   liquibase:
     enabled: false
