@@ -1,0 +1,102 @@
+databaseChangeLog:
+- changeSet:
+    id: 1779721964653-1
+    author: ivanmalutin (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BLOB(2000000000)
+        - column:
+            name: license_id
+            type: BLOB(2000000000)
+        - column:
+            name: name
+            type: VARCHAR(255)
+        tableName: author
+- changeSet:
+    id: 1779721964653-2
+    author: ivanmalutin (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: author_id
+            type: BLOB(2000000000)
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BLOB(2000000000)
+        - column:
+            name: title
+            type: VARCHAR(255)
+        tableName: book
+- changeSet:
+    id: 1779721964653-3
+    author: ivanmalutin (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BLOB(2000000000)
+        - column:
+            name: address
+            type: VARCHAR(255)
+        tableName: bookstore
+- changeSet:
+    id: 1779721964653-4
+    author: ivanmalutin (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: book_id
+            type: BLOB(2000000000)
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: bookstore_id
+            type: BLOB(2000000000)
+        tableName: bookstore_book
+- changeSet:
+    id: 1779721964653-5
+    author: ivanmalutin (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: end_date
+            type: date
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+            name: id
+            type: BLOB(2000000000)
+        tableName: license
+- changeSet:
+    id: 1779721964653-6
+    author: ivanmalutin (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: license_id
+        indexName: sqlite_autoindex_author_1
+        tableName: author
+        unique: true
+
